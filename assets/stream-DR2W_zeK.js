@@ -4230,7 +4230,7 @@ void main() {
 
   void main() {
     // 0 = the last film frame drawn with people, 1 = the stream; each person leaves at its own moment
-    float m = smoothstep(0.0, 1.0, clamp(uMorph * 1.6 - aSeed.z * 0.6, 0.0, 1.0));
+    float m = smoothstep(0.0, 1.0, clamp(uMorph * 1.3 - aSeed.z * 0.3, 0.0, 1.0));
     float u = fract(aSeed.x + uTime * mix(0.018, 0.04, aSeed.y));
     float survive = step(2.5, aFate);
     // gate k (1..3) is "active" once the scroll reached it
@@ -4259,7 +4259,9 @@ void main() {
       : vec2(mix(-uAspect, uAspect, u) * 1.02, cross - 0.05);
     p += uMouse * (0.01 + aSeed.y * 0.02);
     vec2 start = vec2(aStart.x * uAspect, aStart.y) + vec2(sin(uTime * 0.7 + aSeed.x * 20.0), cos(uTime * 0.6 + aSeed.y * 20.0)) * 0.003;
-    p = mix(start, p, m);
+    // the burst: people fly out from the picture in an arc before settling into the stream
+    vec2 away = normalize(start - vec2(0.0, -0.1) + 0.0001) * (0.18 + aSeed.w * 0.22);
+    p = mix(start, p, m) + away * sin(m * 3.14159);
     vMorph = m;
     vCol = aCol;
 

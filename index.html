@@ -18,8 +18,8 @@
 
 <link rel="stylesheet" href="fonts/fonts.css">
 <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('is-ready')},3000)</script>
-  <script type="module" crossorigin src="./assets/index-Cn1CaMM3.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-js8IsiCy.css">
+  <script type="module" crossorigin src="./assets/index-CcNgOIHF.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-dff8aIYV.css">
 </head>
 <body>
 <a class="skip" href="#main">К содержанию</a>
@@ -35,11 +35,12 @@
   <a class="nav__mark" href="#top" aria-label="Султан Казбек, в начало">Султан Казбек</a>
   <nav class="nav__links" aria-label="Разделы страницы">
     <a href="#stream">Что делаю</a>
-    <a href="#days">Первые две недели</a>
+    <a href="#otan">Интернет-магазин</a>
     <a href="#case">Пример</a>
+    <a href="#days">Две недели</a>
     <a href="#price">Сколько стоит</a>
+    <a href="#work">Работы</a>
     <a href="#faq">Вопросы</a>
-    <a href="#about">Обо мне</a>
   </nav>
   <a class="btn btn--pill nav__cta" href="https://wa.me/77064120830?text=%D0%AF%20%D1%81%20%D0%B2%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D0%BC." target="_blank" rel="noopener"><span>Вернуться в чат</span></a>
   <button class="nav__burger" type="button" aria-expanded="false" aria-controls="menu" data-burger><span></span><span></span><span class="sr">Меню</span></button>
@@ -48,11 +49,12 @@
 <div class="menu" id="menu" data-menu hidden>
   <nav aria-label="Меню">
     <a href="#stream">Что делаю</a>
-    <a href="#days">Первые две недели</a>
+    <a href="#otan">Интернет-магазин</a>
     <a href="#case">Пример</a>
+    <a href="#days">Две недели</a>
     <a href="#price">Сколько стоит</a>
+    <a href="#work">Работы</a>
     <a href="#faq">Вопросы</a>
-    <a href="#about">Обо мне</a>
   </nav>
 </div>
 
@@ -62,8 +64,10 @@
 
 <main id="main">
 
-<section class="hero" id="top" data-theme="dark">
-        <div class="hero__sticky">
+  <!-- 0 · Первый экран: ролик идёт от прокрутки, подписи привязаны к его сценам -->
+  <section class="hero" id="top" data-theme="dark">
+    <h1 class="sr">Куда делись клиенты после вашей рекламы? Я покажу, кто из них дошёл до денег.</h1>
+    <div class="hero__sticky">
       <div class="hero__film" data-film>
         <picture>
           <source media="(min-width: 900px) and (orientation: landscape)" srcset="media/film-w-poster.webp">
@@ -72,38 +76,32 @@
         <video class="hero__video" muted playsinline preload="none" data-film-video aria-hidden="true" tabindex="-1"></video>
         <canvas class="hero__seq" data-film-seq aria-hidden="true"></canvas>
       </div>
-      <div class="hero__beats">
+      <div class="hero__beats" aria-hidden="true">
         <div class="beat beat--first" data-beat="0,0.2" data-beat-w="0,0.2">
-          <p class="hero__who">Султан Казбек. Раньше отвечал за выручку интернет-магазина, теперь веду рекламу для владельцев бизнеса. Работаю один, онлайн по всему Казахстану.</p>
-          <h1 class="beat__big">Куда делись клиенты после вашей рекламы? <span class="accent">Я покажу, кто из них дошёл до денег.</span></h1>
-          <p class="beat__sub">Не отчёт с кликами и не тишина после оплаты: каждый рабочий день видно, кто написал, кто получил ответ и кто купил.</p>
-          <a class="hcase" href="#case">
-            <span class="hcase__label">Строительная компания · сайт, помощник и реклама</span>
-            <span class="hcase__nums"><b>117 000 ₸</b> <i>реклама</i> <em aria-hidden="true">→</em> <b class="accent">29 млн ₸</b> <i>договоры</i></span>
-            <span class="hcase__note">У вас цифры будут свои</span>
-          </a>
-          <ul class="chips"><li>2 недели · 50 000 ₸</li><li>дальше 200 000 ₸ в месяц</li><li>кабинет, номер, база ваши</li></ul>
-          <a class="btn btn--big hero__btn" data-magnetic href="https://wa.me/77064120830?text=%D0%AF%20%D1%81%20%D0%B2%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D0%BC." target="_blank" rel="noopener"><span>Вернуться в чат</span><span class="btn__arrow"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+          <p class="hero__who mono">Султан Казбек · работаю один, онлайн по всему Казахстану</p>
+          <p class="beat__big">Куда делись клиенты после вашей рекламы?</p>
+          <p class="hero__scroll mono">листайте вниз</p>
         </div>
-        <div class="beat" aria-hidden="true" data-beat="0.45,0.585" data-beat-w="0.45,0.585"><div class="chat"><p class="bubble bubble--in">Здравствуйте! Есть в наличии?<time>19:42</time></p></div><p class="beat__word">Кто написал.</p></div>
-        <div class="beat" aria-hidden="true" data-beat="0.59,0.71" data-beat-w="0.59,0.71"><div class="chat"><p class="bubble bubble--in bubble--old">Здравствуйте! Есть в наличии?<time>19:42</time></p><p class="bubble bubble--out">Да, есть. Доставим сегодня<time>19:43 <span class="ticks2">✓✓</span></time></p></div><p class="beat__word">Кто получил ответ.</p></div>
-        <div class="beat beat--last" aria-hidden="true" data-beat="0.75,9" data-beat-w="0.75,9">
+        <div class="beat" data-beat="0.45,0.585" data-beat-w="0.45,0.585"><div class="chat"><p class="bubble bubble--in">Здравствуйте! Есть в наличии?<time>19:42</time></p></div><p class="beat__word">Кто написал.</p></div>
+        <div class="beat" data-beat="0.59,0.71" data-beat-w="0.59,0.71"><div class="chat"><p class="bubble bubble--in bubble--old">Здравствуйте! Есть в наличии?<time>19:42</time></p><p class="bubble bubble--out">Да, есть. Доставим сегодня<time>19:43 <span class="ticks2">✓✓</span></time></p></div><p class="beat__word">Кто получил ответ.</p></div>
+        <div class="beat beat--last" data-beat="0.75,9" data-beat-w="0.75,9">
           <p class="beat__word accent">И кто купил.</p>
-          <p class="beat__big">Я покажу, кто из них дошёл до денег.</p>
+          <p class="beat__big">Я покажу, кто из них дошёл до денег.</p>
         </div>
       </div>
       <div class="hero__act" data-hero-act>
-        <a class="btn btn--big" data-magnetic href="https://wa.me/77064120830?text=%D0%AF%20%D1%81%20%D0%B2%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D0%BC." target="_blank" rel="noopener"><span>Вернуться в чат</span><span class="btn__arrow"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
+        <a class="btn btn--big" data-magnetic href="https://wa.me/77064120830?text=%D0%AF%20%D1%81%20%D0%B2%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D0%BC." target="_blank" rel="noopener"><span>Вернуться в чат</span><span class="btn__arrow"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
         <ul class="chips">
           <li>2 недели · 50 000 ₸</li>
-          <li>дальше 200 000 ₸ в месяц</li>
+          <li>дальше 200 000 ₸ в месяц</li>
           <li>кабинет, номер, база ваши</li>
         </ul>
       </div>
     </div>
   </section>
 
-<section class="stream" id="stream" data-theme="dark" aria-label="Путь клиента от рекламы до покупки">
+  <!-- 1 · Путь клиента: люди → сообщения → ответы → покупки -->
+  <section class="stream" id="stream" data-theme="dark" aria-label="Путь клиента от рекламы до покупки">
     <div class="stream__sticky">
       <p class="stream__intro" data-stream-intro>Каждая точка: человек, который увидел вашу рекламу</p>
       <ol class="gates" data-gates>
@@ -115,35 +113,55 @@
       <p class="stream__final" data-stream-final>Не отчёт с кликами и не тишина после оплаты: каждый рабочий день видно, кто написал, кто получил ответ и <span class="accent">кто купил.</span></p>
     </div>
   </section>
+
   <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Увидел рекламу · Написал · Получил ответ · Купил ·&nbsp;</span><span>Увидел рекламу · Написал · Получил ответ · Купил ·&nbsp;</span></div></div>
 
-<section class="days" id="days" data-theme="paper">
-    <div class="days__pin" data-days>
-      <h2 class="days__title">Что у вас будет через десять рабочих дней?</h2>
-      <div class="days__stage">
-        <div class="days__dial" aria-hidden="true">
-          <svg class="days__ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54"/><circle class="days__arc" data-day-arc cx="60" cy="60" r="54" pathLength="100"/></svg>
-          <p class="days__num"><span data-day-num>2</span></p>
-          <p class="days__of mono">из 10</p>
-        </div>
-        <ol class="days__list" data-day-list>
-          <li><span class="mono">второй день</span>Разбор, где у вас пропадают люди, и что я бы исправил первым.</li>
-          <li><span class="mono">четвёртый день</span>Запущенная реклама и помощник.</li>
-          <li><span class="mono">седьмой день</span>Первые цифры от заявки до встречи или покупки, и если они плохие, скажу первым.</li>
-          <li><span class="mono">десятый день</span>Итог на одной странице и мой совет: продолжать, менять что-то или остановиться.</li>
-        </ol>
+  <!-- 2 · Интернет-магазин: где я отвечал за деньги -->
+  <section class="otan" id="otan" data-theme="dark">
+    <div class="deeds" data-deeds>
+      <p class="deeds__bg" aria-hidden="true" data-deeds-bg>Интернет-магазин часов · Интернет-магазин часов ·</p>
+      <div class="deeds__head">
+        <p class="mono">Интернет-магазин часов · замдиректора, в штате</p>
+        <h2 class="deeds__title">Что я делал в интернет-магазине</h2>
+        <p class="deeds__lead">Я был замдиректора и отвечал не за заявки, а за деньги магазина.</p>
       </div>
-      <div class="days__dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-    </div>
-    <div class="wrap">
-      <details class="more">
-        <summary>Что нужно от вас</summary>
-        <p>От вас: в первые дни нажимать «отправить» под готовым ответом, пока помощник учится на ваших переписках, потом он ведёт переписку сам; и открыть доступ к рекламному аккаунту через настройки. Если продолжать не стоит, так и напишу. Не пойдёте дальше: реклама встанет в тот же день, а разбор второго дня останется у вас.</p>
-      </details>
+      <div class="deeds__track" data-deeds-track>
+        <article class="deed deed--num"><figure class="deed__pic"><img class="deed__bgimg" src="media/otan/o1.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="deed__img" src="media/otan/o1.webp" alt="Часы магазина на руке в воде" loading="lazy" decoding="async"></figure><div class="deed__body"><p class="deed__big">+64%</p><p class="deed__cap">выручка магазина за два года</p></div></article>
+        <article class="deed deed--num"><figure class="deed__pic"><img class="deed__bgimg" src="media/otan/o2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="deed__img" src="media/otan/o2.webp" alt="Часы магазина на монетах" loading="lazy" decoding="async"></figure><div class="deed__body"><p class="deed__big">90,7 млн ₸</p><p class="deed__cap">выручка магазина за 2024</p></div></article>
+        <article class="deed deed--ad">
+          <div class="post"><p class="post__top"><span class="post__ava">O</span><span>otan.kz</span><em>Реклама</em></p><img src="media/otan/d4.webp" alt="Рекламный креатив магазина" loading="lazy" decoding="async"></div>
+          <div class="deed__body"><p class="deed__big">6,3 ₸</p><p class="deed__cap">выручки на каждый вложенный в рекламу тенге. Реклама Kaspi и Meta</p><p class="deed__note">Так было в интернет-магазине, где я работал в штате. У вас цифры будут свои, заранее я их не называю.</p></div>
+        </article>
+        <article class="deed deed--num"><figure class="deed__pic"><img class="deed__bgimg" src="media/otan/o4.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="deed__img" src="media/otan/o4.webp" alt="Часы магазина в подарочной коробке" loading="lazy" decoding="async"></figure><div class="deed__body"><p class="deed__big">+22%</p><p class="deed__cap">средний чек · сайт и упаковка</p></div></article>
+        <article class="deed deed--stat">
+          <div class="deed__body">
+            <p class="deed__n mono">Филиал в Астане</p>
+            <p class="deed__big">40–50%</p>
+            <p class="deed__cap">выручки дал регион</p>
+            <div class="bars" aria-label="Доставка: было 3–4 дня, стало 1–2 дня">
+              <p><span class="mono">было</span><i style="--w:100%"></i><b>3–4 дня</b></p>
+              <p><span class="mono">стало</span><i style="--w:42%"></i><b>1–2 дня</b></p>
+            </div>
+          </div>
+        </article>
+        <article class="deed deed--video">
+          <video class="deed__vid" muted loop playsinline preload="none" data-poster="media/otan-3-poster.webp" data-autoplay aria-label="Рекламный ролик магазина"><source src="media/otan-3.mp4" type="video/mp4"></video>
+          <div class="deed__body">
+            <p class="deed__n mono">Ролики для рекламы</p>
+            <p class="deed__pair"><b>500 тыс.</b><span>просмотров</span></p>
+            <p class="deed__pair"><b>−40%</b><span>цена заявки</span></p>
+          </div>
+        </article>
+        <a class="deed deed--pdf" href="docs/otan.pdf" target="_blank" rel="noopener">
+          <img src="media/covers/otan.webp" alt="Обложка кейса интернет-магазина" loading="lazy" decoding="async">
+          <span class="deed__body"><span class="deed__n mono">Полный кейс</span><span class="deed__go">Весь кейс в PDF <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
+        </a>
+      </div>
     </div>
   </section>
 
-<section class="case" id="case" data-theme="paper">
+  <!-- 3 · Кейс стройки: от вложенного к итогу -->
+  <section class="case" id="case" data-theme="paper">
     <div class="case__pin" data-case>
       <p class="case__q">«С кем работали? Можно взглянуть на кейсы?»</p>
       <p class="case__label mono">Строительная компания · сайт, помощник и реклама</p>
@@ -166,9 +184,37 @@
     </div>
   </section>
 
-<section class="fit" data-theme="paper">
+  <!-- 4 · Десять рабочих дней: цифра дня меняется на месте -->
+  <section class="days" id="days" data-theme="paper">
+    <div class="days__pin" data-days>
+      <h2 class="days__title">Что у вас будет через десять рабочих дней?</h2>
+      <div class="days__stage">
+        <div class="days__dial" aria-hidden="true">
+          <svg class="days__ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="54"/><circle class="days__arc" data-day-arc cx="60" cy="60" r="54" pathLength="100"/></svg>
+          <p class="days__num"><span data-day-num>2</span></p>
+          <p class="days__of mono">из 10</p>
+        </div>
+        <ol class="days__list" data-day-list>
+          <li><span class="mono">второй день</span>Разбор, где у вас пропадают люди, и что я бы исправил первым.</li>
+          <li><span class="mono">четвёртый день</span>Запущенная реклама и помощник.</li>
+          <li><span class="mono">седьмой день</span>Первые цифры от заявки до встречи или покупки, и если они плохие, скажу первым.</li>
+          <li><span class="mono">десятый день</span>Итог на одной странице и мой совет: продолжать, менять что-то или остановиться.</li>
+        </ol>
+      </div>
+      <div class="days__dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </div>
     <div class="wrap">
-      <h2 class="h2 h2--long" data-split>Открыли новую точку, клиентов стало меньше или пишут, а до продаж не доходит? Это ко мне</h2>
+      <details class="more">
+        <summary>Что нужно от вас</summary>
+        <p>От вас: в первые дни нажимать «отправить» под готовым ответом, пока помощник учится на ваших переписках, потом он ведёт переписку сам; и открыть доступ к рекламному аккаунту через настройки. Если продолжать не стоит, так и напишу. Не пойдёте дальше: реклама встанет в тот же день, а разбор второго дня останется у вас.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- 5 · Кому подойдёт -->
+  <section class="fit" data-theme="paper">
+    <div class="wrap">
+      <h2 class="h2" data-split>Пишут, а до продаж не доходит? Это ко мне</h2>
       <div class="fit__cols">
         <ul class="ticks" data-stagger>
           <li>клиенты пишут вам в WhatsApp</li>
@@ -188,7 +234,8 @@
     </div>
   </section>
 
-<section class="keep" data-theme="dark">
+  <!-- 6 · Что останется: слова загораются от прокрутки -->
+  <section class="keep" data-theme="dark">
     <div class="wrap">
       <h2 class="keep__title">Уйдёте от меня, и что у вас останется?</h2>
       <ul class="keep__list" data-keep>
@@ -205,16 +252,17 @@
     </div>
   </section>
 
-<section class="price" id="price" data-theme="dark">
+  <!-- 7 · Цена -->
+  <section class="price" id="price" data-theme="dark">
     <div class="wrap">
       <h2 class="h2" data-split>Сколько вы тратите за две недели?</h2>
       <div class="receipt" data-receipt>
         <p class="receipt__head mono">Две недели · расчёт</p>
-        <p class="receipt__row"><span>Мне за работу, две недели</span><b><span data-roll="50000">50 000</span> ₸</b></p>
-        <p class="receipt__row"><span>На рекламу с вашей карты</span><b>от <span data-roll="30000">30 000</span> ₸</b></p>
-        <p class="receipt__total"><span>Максимум, чем вы рискуете за мою работу</span><b>50 000 ₸</b></p>
-        <p class="receipt__row receipt__row--next"><span>Дальше, в месяц, весь состав</span><b class="accent"><span data-roll="200000">200 000</span> ₸</b></p>
-        <p class="receipt__foot mono">Уйти можно в любой месяц</p>
+        <p class="receipt__row"><span>Мне за работу, две недели</span><b><span data-roll="50000">50 000</span> ₸</b></p>
+        <p class="receipt__row"><span>На рекламу с вашей карты</span><b>от <span data-roll="30000">30 000</span> ₸</b></p>
+        <p class="receipt__total"><span>Максимум, чем вы рискуете за мою работу</span><b>50 000 ₸</b></p>
+        <p class="receipt__row receipt__row--next"><span>Дальше, в месяц, весь состав</span><b class="accent"><span data-roll="200000">200 000</span> ₸</b></p>
+        <p class="receipt__foot mono">Уйти можно в любой месяц</p>
       </div>
       <details class="more">
         <summary>Как платить и что входит</summary>
@@ -225,9 +273,10 @@
     </div>
   </section>
 
-<section class="compare" data-theme="dark">
+  <!-- 8 · Где заканчивается работа -->
+  <section class="compare" data-theme="dark">
     <div class="wrap">
-      <h2 class="h2 h2--long" data-split>Где обычно заканчивается работа, и где она заканчивается у меня</h2>
+      <h2 class="h2" data-split>Где обычно заканчивается работа, и где у меня</h2>
       <div class="track" data-track aria-hidden="true">
         <div class="track__rail"><span class="track__fill" data-track-fill></span></div>
         <div class="track__stop" style="--u:.2"><span class="track__dot"></span><span class="track__who">Знакомый таргетолог</span><span class="track__where mono">на запуске</span></div>
@@ -241,78 +290,11 @@
     </div>
   </section>
 
-<section class="faq" id="faq" data-theme="paper">
+  <!-- 9 · Работы: ранние проекты, 20 разборов, как я смотрю на бизнес -->
+  <section class="work" id="work" data-theme="dark">
     <div class="wrap">
-      <h2 class="h2 h2--long" data-split>Что меня спрашивают в переписке чаще всего</h2>
-      <div class="faq__list chatlog">
-        <details class="acc"><summary><span>Что если не сработает?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Честно: гарантии результата нет. Зато есть понятная работа: две недели, одно направление, разбор второго дня, и по цифрам 7-го и 10-го дня я скажу, что сделал бы на вашем месте, даже если это «не продолжать».</p></div></details>
-        <details class="acc"><summary><span>Можно платить за результат или процентом с продаж?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Нет, оплата только вперёд: 50 000 ₸ переводом до старта, дальше 200 000 ₸ в месяц. С продаж я ничего не беру. Вы платите за мою работу и видите, за что именно.</p></div></details>
-        <details class="acc"><summary><span>Кто отвечает моим клиентам, программа?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Сначала вы: помощник пишет ответ, вы нажимаете кнопку, пока он учится на ваших переписках. Потом, когда разрешите, он отвечает сам. Старые переписки читаю только с вашего письменного разрешения.</p></div></details>
-        <details class="acc"><summary><span>Вы один, успеете?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Да, я работаю один, одновременно у меня не больше трёх клиентов. Если после оплаты я замолчу, вы узнаете это в тот же день: отчёт приходит каждый рабочий день.</p></div></details>
-        <details class="acc"><summary><span>Я сам смогу / у меня есть человек подешевле. Чем вы лучше?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Может, и сможете. Разница в том, что я смотрю не на заявки, а на то, дошли ли они до денег. Две недели за 50 000 ₸ как раз покажут, стоит ли это вам больше, чем делать самому.</p></div></details>
-        <details class="acc"><summary><span>Можно созвониться?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Да. Если вам спокойнее услышать меня до оплаты, напишите в чат, когда удобно, и я наберу. Без звонка тоже можно: в переписке покажу, что будет по дням.</p></div></details>
-      </div>
-    </div>
-  </section>
-
-<section class="cta" data-theme="dark">
-    <canvas class="cta__canvas" data-cta-canvas aria-hidden="true"></canvas>
-    <a class="cta__link" data-magnetic-soft href="https://wa.me/77064120830?text=%D0%AF%20%D1%81%20%D0%B2%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D0%BC." target="_blank" rel="noopener">
-      <span class="cta__big" data-split-chars>Вернуться в чат</span>
-      <span class="cta__circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
-    </a>
-  </section>
-
-  <!-- 11 · Подробнее обо мне -->
-  <section class="about" id="about" data-theme="dark">
-    <div class="wrap about__head">
-      <h2 class="h2" data-split>Подробнее обо мне</h2>
-      <p class="lead">Всё, что выше, про работу для вас. Ниже то, откуда я это знаю: где работал и как думаю.</p>
-    </div>
-    <div class="deeds" data-deeds>
-      <p class="deeds__bg" aria-hidden="true" data-deeds-bg>Интернет-магазин часов · Интернет-магазин часов ·</p>
-      <div class="deeds__head">
-        <p class="mono">Интернет-магазин часов · замдиректора, в штате</p>
-        <h2 class="deeds__title">Что я делал в интернет-магазине</h2>
-        <p class="deeds__lead">Я был замдиректора и отвечал не за заявки, а за деньги магазина.</p>
-      </div>
-      <div class="deeds__track" data-deeds-track>
-        <article class="deed deed--num"><figure class="deed__pic"><img class="deed__bgimg" src="media/otan/o1.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="deed__img" src="media/otan/o1.webp" alt="Часы магазина на руке в воде" loading="lazy" decoding="async"></figure><div class="deed__body"><p class="deed__big">+64%</p><p class="deed__cap">выручка магазина за два года</p></div></article>
-        <article class="deed deed--num"><figure class="deed__pic"><img class="deed__bgimg" src="media/otan/o2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="deed__img" src="media/otan/o2.webp" alt="Часы магазина на монетах" loading="lazy" decoding="async"></figure><div class="deed__body"><p class="deed__big">90,7 млн ₸</p><p class="deed__cap">выручка магазина за 2024</p></div></article>
-        <article class="deed deed--ad">
-          <div class="post"><p class="post__top"><span class="post__ava">O</span><span>otan.kz</span><em>Реклама</em></p><img src="media/otan/d4.webp" alt="Рекламный креатив магазина" loading="lazy" decoding="async"></div>
-          <div class="deed__body"><p class="deed__big">6,3 ₸</p><p class="deed__cap">выручки на каждый вложенный в рекламу тенге. Реклама Kaspi и Meta</p><p class="deed__note">Так было в интернет-магазине, где я работал в штате. У вас цифры будут свои, заранее я их не называю.</p></div>
-        </article>
-        <article class="deed deed--num"><figure class="deed__pic"><img class="deed__bgimg" src="media/otan/o4.webp" alt="" aria-hidden="true" loading="lazy" decoding="async"><img class="deed__img" src="media/otan/o4.webp" alt="Часы магазина в подарочной коробке" loading="lazy" decoding="async"></figure><div class="deed__body"><p class="deed__big">+22%</p><p class="deed__cap">средний чек · сайт и упаковка</p></div></article>
-        <article class="deed deed--stat">
-          <div class="deed__body">
-            <p class="deed__n mono">Филиал в Астане</p>
-            <p class="deed__big">40–50%</p>
-            <p class="deed__cap">выручки дал регион</p>
-            <div class="bars" aria-label="Доставка: было 3–4 дня, стало 1–2 дня">
-              <p><span class="mono">было</span><i style="--w:100%"></i><b>3–4 дня</b></p>
-              <p><span class="mono">стало</span><i style="--w:42%"></i><b>1–2 дня</b></p>
-            </div>
-          </div>
-        </article>
-        <article class="deed deed--video">
-          <video class="deed__vid" muted loop playsinline preload="none" data-poster="media/otan-3-poster.webp" data-autoplay aria-label="Рекламный ролик магазина"><source src="media/otan-3.mp4" type="video/mp4"></video>
-          <div class="deed__body">
-            <p class="deed__n mono">Ролики для рекламы</p>
-            <p class="deed__pair"><b>500 тыс.</b><span>просмотров</span></p>
-            <p class="deed__pair"><b>−40%</b><span>цена заявки</span></p>
-          </div>
-        </article>
-        <a class="deed deed--pdf" href="docs/otan.pdf" target="_blank" rel="noopener">
-          <img src="media/covers/otan.webp" alt="Обложка кейса интернет-магазина" loading="lazy" decoding="async">
-          <span class="deed__body"><span class="deed__n mono">Полный кейс</span><span class="deed__go">Весь кейс в PDF <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></span>
-        </a>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <h2 class="sub" data-split>С чего я начинал</h2>
-      <p class="work__lead work__lead--sm">Здесь была другая цель: не продажи, а чтобы о проекте узнали. Другая цель, другая работа.</p>
+      <h2 class="sub" data-split>С чего я начинал</h2>
+      <p class="work__lead work__lead--sm">Здесь была другая цель: не продажи, а чтобы о проекте узнали. Другая цель, другая работа.</p>
       <div class="projects">
         <a class="project" href="docs/cerebra.pdf" target="_blank" rel="noopener" data-tilt>
           <span class="project__img"><img src="media/covers/cerebra.webp" alt="Обложка кейса Cerebra" width="76" height="76" loading="lazy" decoding="async"></span>
@@ -331,9 +313,8 @@
 
     <div class="ring" data-ring>
       <div class="wrap ring__head">
-        <h2 class="h2 h2--long">Как я думаю про чужой маркетинг</h2>
-        <p class="work__lead">Я разобрал маркетинг 20 казахстанских компаний. Я не работал ни в одной из них, это мой взгляд со стороны. Разборы открыты, но решать по ним не нужно: всё, что касается работы с вами, написано выше.</p>
-        <p class="ring__hint mono" aria-hidden="true">потяните, чтобы крутить · нажмите, чтобы открыть</p>
+        <h2 class="h2">20 разборов чужого маркетинга</h2>
+        <p class="work__lead">Взгляд со стороны на казахстанские компании, я в них не работал. Крутите и открывайте.</p>
       </div>
       <div class="ring__stage" data-ring-stage aria-hidden="true">
         <div class="ring__wheel" data-ring-wheel></div>
@@ -362,16 +343,34 @@
       </ul>
     </div>
 
-    <div class="wrap who">
-      <h2 class="sub">Кто я и как работаю</h2>
-      <p class="who__text">Я веду рекламу 4,5 года. Был замдиректора по выручке и марже в интернет-магазине. Работаю один, онлайн, по всему Казахстану.</p>
-      <p class="who__tags mono">Реклама и деньги · Онлайн · Работаю один</p>
+  </section>
+
+  <!-- 10 · Вопросы -->
+  <section class="faq" id="faq" data-theme="paper">
+    <div class="wrap">
+      <h2 class="h2" data-split>Что спрашивают чаще всего</h2>
+      <div class="faq__list chatlog">
+        <details class="acc"><summary><span>Что если не сработает?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Честно: гарантии результата нет. Зато есть понятная работа: две недели, одно направление, разбор второго дня, и по цифрам 7-го и 10-го дня я скажу, что сделал бы на вашем месте, даже если это «не продолжать».</p></div></details>
+        <details class="acc"><summary><span>Можно платить за результат или процентом с продаж?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Нет, оплата только вперёд: 50 000 ₸ переводом до старта, дальше 200 000 ₸ в месяц. С продаж я ничего не беру. Вы платите за мою работу и видите, за что именно.</p></div></details>
+        <details class="acc"><summary><span>Кто отвечает моим клиентам, программа?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Сначала вы: помощник пишет ответ, вы нажимаете кнопку, пока он учится на ваших переписках. Потом, когда разрешите, он отвечает сам. Старые переписки читаю только с вашего письменного разрешения.</p></div></details>
+        <details class="acc"><summary><span>Вы один, успеете?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Да, я работаю один, одновременно у меня не больше трёх клиентов. Если после оплаты я замолчу, вы узнаете это в тот же день: отчёт приходит каждый рабочий день.</p></div></details>
+        <details class="acc"><summary><span>Я сам смогу / у меня есть человек подешевле. Чем вы лучше?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Может, и сможете. Разница в том, что я смотрю не на заявки, а на то, дошли ли они до денег. Две недели за 50 000 ₸ как раз покажут, стоит ли это вам больше, чем делать самому.</p></div></details>
+        <details class="acc"><summary><span>Можно созвониться?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Да. Если вам спокойнее услышать меня до оплаты, напишите в чат, когда удобно, и я наберу. Без звонка тоже можно: в переписке покажу, что будет по дням.</p></div></details>
+        <details class="acc"><summary><span>Кто вы?</span><i aria-hidden="true"></i></summary><div class="acc__body"><p>Я веду рекламу 4,5 года. Был замдиректора по выручке и марже в интернет-магазине. Работаю один, онлайн, по всему Казахстану.</p></div></details>
+      </div>
     </div>
+  </section>
+
+  <!-- 11 · Финал: огни собираются к кнопке -->
+  <section class="cta" data-theme="dark">
+    <canvas class="cta__canvas" data-cta-canvas aria-hidden="true"></canvas>
+    <a class="cta__link" data-magnetic-soft href="https://wa.me/77064120830?text=%D0%AF%20%D1%81%20%D0%B2%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D0%BC." target="_blank" rel="noopener">
+      <span class="cta__big" data-split-chars>Вернуться в чат</span>
+      <span class="cta__circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span>
+    </a>
     <div class="wrap contact">
-      <h2 class="h2 h2--long" data-split>Если вы готовы начать или просто хотите спросить.</h2>
       <p>Пишите в чат. Пароли и документы в чат не присылайте: доступ к рекламному кабинету даётся через настройки, без пароля.</p>
       <p class="contact__mail">Или на почту: <a href="mailto:kazsultan.uni@gmail.com">kazsultan.uni@gmail.com</a></p>
-      <a class="btn btn--big contact__btn" data-magnetic href="https://wa.me/77064120830?text=%D0%AF%20%D1%81%20%D0%B2%D0%B0%D1%88%D0%B5%D0%B3%D0%BE%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%2C%20%D0%B4%D0%B0%D0%B2%D0%B0%D0%B9%D1%82%D0%B5%20%D0%BF%D1%80%D0%BE%D0%B4%D0%BE%D0%BB%D0%B6%D0%B8%D0%BC." target="_blank" rel="noopener"><span>Вернуться в чат</span><span class="btn__arrow"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </div>
     <footer class="foot wrap">
       <span class="nav__mark">Султан Казбек</span>

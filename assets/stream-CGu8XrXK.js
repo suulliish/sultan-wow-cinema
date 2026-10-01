@@ -4230,7 +4230,7 @@ void main() {
 
   void main() {
     // 0 = the last film frame drawn with people, 1 = the stream; each person leaves at its own moment
-    float m = smoothstep(0.0, 1.0, clamp(uMorph * 1.6 - aSeed.z * 0.6, 0.0, 1.0));
+    float m = smoothstep(0.0, 1.0, clamp(uMorph * 1.4 - aSeed.z * 0.4, 0.0, 1.0));
     float u = fract(aSeed.x + uTime * mix(0.018, 0.04, aSeed.y));
     float survive = step(2.5, aFate);
     // gate k (1..3) is "active" once the scroll reached it
@@ -4268,11 +4268,12 @@ void main() {
 
     float edge = smoothstep(0.0, 0.04, u) * (1.0 - smoothstep(0.96, 1.0, u));
     vFlash = act * exp(-abs(u - gatePos) * 60.0);
-    // people appear already moving: no picture-made-of-dots stage
-    vAlpha = mix(0.0, (1.0 - d) * edge * clamp(uIntro * 1.6 - u * 0.6, 0.0, 1.0) * mix(0.55, 1.0, aSeed.y), m) * uDim;
+    // the picture is made of people for an instant: their colour and brightness come from the frame
+    float lum = dot(aCol, vec3(0.3, 0.59, 0.11));
+    vAlpha = mix(clamp(lum * 1.8, 0.12, 1.0), (1.0 - d) * edge * clamp(uIntro * 1.6 - u * 0.6, 0.0, 1.0) * mix(0.55, 1.0, aSeed.y), m) * uDim;
 
     gl_Position = vec4(p.x / uAspect, p.y, 0.0, 1.0);
-    gl_PointSize = mix(uSize * 0.7, uSize * mix(0.8, 1.15, aSeed.w), m) * uDpr * (vIcon > 2.5 ? 1.25 : 1.0) * (1.0 + vFlash * 0.5);
+    gl_PointSize = mix(uMosaic, uSize * mix(0.8, 1.15, aSeed.w), m) * uDpr * (vIcon > 2.5 ? 1.25 : 1.0) * (1.0 + vFlash * 0.5);
   }
 `,Ms=`
   precision mediump float;
@@ -4285,7 +4286,7 @@ void main() {
     float m = texture2D(uAtlas, uv).a;
     vec3 col = vIcon < 0.5 ? uCool : (vIcon > 2.5 ? uAmber : uPaper);
     col = mix(col, uAmber, vFlash * 0.6);
-    col = mix(mix(vCol * 1.35, col, 0.6), col, vMorph);
+    col = mix(vCol * 1.4, col, smoothstep(0.0, 0.7, vMorph));
     float a = m * clamp(vAlpha + vFlash * 0.4, 0.0, 1.0);
     gl_FragColor = vec4(col * a, a);
   }

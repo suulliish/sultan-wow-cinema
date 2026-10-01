@@ -4230,7 +4230,7 @@ void main() {
 
   void main() {
     // 0 = the last film frame drawn with people, 1 = the stream; each person leaves at its own moment
-    float m = smoothstep(0.0, 1.0, clamp(uMorph * 1.3 - aSeed.z * 0.3, 0.0, 1.0));
+    float m = smoothstep(0.0, 1.0, clamp(uMorph * 1.6 - aSeed.z * 0.6, 0.0, 1.0));
     float u = fract(aSeed.x + uTime * mix(0.018, 0.04, aSeed.y));
     float survive = step(2.5, aFate);
     // gate k (1..3) is "active" once the scroll reached it
@@ -4260,17 +4260,19 @@ void main() {
     p += uMouse * (0.01 + aSeed.y * 0.02);
     vec2 start = vec2(aStart.x * uAspect, aStart.y) + vec2(sin(uTime * 0.7 + aSeed.x * 20.0), cos(uTime * 0.6 + aSeed.y * 20.0)) * 0.003;
     // the burst: people fly out from the picture in an arc before settling into the stream
-    vec2 away = normalize(start - vec2(0.0, -0.1) + 0.0001) * (0.18 + aSeed.w * 0.22);
-    p = mix(start, p, m) + away * sin(m * 3.14159);
+    // the frame dissolves into moving light: every speck sets off right away and drifts into the stream
+    vec2 sway = vec2(sin(aSeed.x * 6.283 + m * 3.0), cos(aSeed.y * 6.283 + m * 2.0)) * 0.06 * sin(m * 3.14159);
+    p = mix(start, p, m) + sway;
     vMorph = m;
     vCol = aCol;
 
     float edge = smoothstep(0.0, 0.04, u) * (1.0 - smoothstep(0.96, 1.0, u));
     vFlash = act * exp(-abs(u - gatePos) * 60.0);
-    vAlpha = mix(1.0, (1.0 - d) * edge * clamp(uIntro * 1.6 - u * 0.6, 0.0, 1.0) * mix(0.55, 1.0, aSeed.y), m) * uDim;
+    // people appear already moving: no picture-made-of-dots stage
+    vAlpha = mix(0.0, (1.0 - d) * edge * clamp(uIntro * 1.6 - u * 0.6, 0.0, 1.0) * mix(0.55, 1.0, aSeed.y), m) * uDim;
 
     gl_Position = vec4(p.x / uAspect, p.y, 0.0, 1.0);
-    gl_PointSize = mix(uMosaic, uSize * mix(0.8, 1.15, aSeed.w), m) * uDpr * (vIcon > 2.5 ? 1.25 : 1.0) * (1.0 + vFlash * 0.5);
+    gl_PointSize = mix(uSize * 0.7, uSize * mix(0.8, 1.15, aSeed.w), m) * uDpr * (vIcon > 2.5 ? 1.25 : 1.0) * (1.0 + vFlash * 0.5);
   }
 `,Ms=`
   precision mediump float;
@@ -4283,7 +4285,7 @@ void main() {
     float m = texture2D(uAtlas, uv).a;
     vec3 col = vIcon < 0.5 ? uCool : (vIcon > 2.5 ? uAmber : uPaper);
     col = mix(col, uAmber, vFlash * 0.6);
-    col = mix(vCol * 1.35, col, vMorph);
+    col = mix(mix(vCol * 1.35, col, 0.6), col, vMorph);
     float a = m * clamp(vAlpha + vFlash * 0.4, 0.0, 1.0);
     gl_FragColor = vec4(col * a, a);
   }
